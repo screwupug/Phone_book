@@ -3,10 +3,9 @@ import in_lines
 import logger
 key = 0
 line = ''
-initial_key = 0
-def menu():
+
+def start():
     global key
-    global initial_key
     print('Это телефонный справочник.\n' +
     'Он может хранить и выводить данные в двух форматах:\n' +
     'в одну строку или в несколько строк.\n')
@@ -38,4 +37,3 @@ def get_value():
     elif key == 2:
         logger.logg_out(line, key)
 
-menu()

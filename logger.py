@@ -3,11 +3,13 @@
 def in_one_line(data):
     with open('phone_book.txt', 'a', encoding='utf-8') as file:
         file.write(f'{data[0]}; {data[1]}; {data[2]}; {data[3]}\n')
+        print('Контакт успешно записан')
 
 
 def in_lines(data):
     with open('phone_book.txt', 'a', encoding='utf-8') as file:
         file.write(f'{data[0]}\n{data[1]}\n{data[2]}\n{data[3]}\n')
+        print('Контакт успешно записан')
 
 
 def logg_out(data, key):
@@ -33,14 +35,14 @@ def logg_out(data, key):
                     if not line == None:
                         continue
                     else:
-                        print('Такого контакта нет в файле')
+                        print('Такого контакта нет в файле') # Почему-то не работает
                         break
             except Exception:
                 print('Ошибка ввода')
 
 
 def logg_out_line_in_one_line(data):
-    print(data)
+    print(data.replace(';', ''))
 
 
 def logg_out_line_in_lines(data):

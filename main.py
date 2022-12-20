@@ -1,0 +1,3 @@
+import inerface
+
+inerface.start()
